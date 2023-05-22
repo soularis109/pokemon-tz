@@ -1,10 +1,12 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import PokemonList from "entities/Pokemon/ui/PokemonList/PokemonList";
 
 const MainPage = () => {
     return (
         <div>
             Main
+
+            <PokemonList/>
         </div>
     );
 };
