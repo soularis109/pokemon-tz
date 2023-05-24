@@ -1,5 +1,5 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
-import {ThunkConfig} from "providers/StoreProvider";
+import {ThunkConfig} from "app/providers/StoreProvider";
 import {PokemonDetails} from "pages/PokemonPage/model/types/pokemonPage";
 
 

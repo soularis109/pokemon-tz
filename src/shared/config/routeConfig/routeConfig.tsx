@@ -1,7 +1,7 @@
-import { MainPage } from 'pages/MainPage';
-import { NotFoundPage } from 'pages/NotFoundPage';
+import {NotFoundPage} from 'pages/NotFoundPage';
 import {RouteProps} from "react-router-dom";
 import PokemonDetails from "entities/Pokemon/ui/PokemonDetails/PokemonDetails";
+import PokemonPage from "pages/PokemonPage/ui/PokemonPage/PokemonPage";
 
 export enum AppRoutes {
     POKEMON = 'pokemon',
@@ -20,7 +20,7 @@ export const RoutePath: Record<AppRoutes, string> = {
 export const routeConfig: Record<AppRoutes, RouteProps> = {
     [AppRoutes.POKEMON]: {
         path: RoutePath.pokemon,
-        element: <MainPage />,
+        element: <PokemonPage />,
     },
     [AppRoutes.POKEMON_DETAILS]: {
         path: `${RoutePath.pokemon_details}:id`,

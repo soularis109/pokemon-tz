@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
 import cls from './Page.module.scss';
-import {StateSchema} from "providers/StoreProvider";
+import {StateSchema} from "app/providers/StoreProvider";
 import {useInfiniteScroll} from "shared/lib/hooks/useInfiniteScroll/useInfiniteScroll";
 import {getScrollPosition, scrollPositionActions} from "features/ScrollPosition";
 import {getScrollPositionByPath} from "features/ScrollPosition/model/selectors/ScrollPositionSelectors";

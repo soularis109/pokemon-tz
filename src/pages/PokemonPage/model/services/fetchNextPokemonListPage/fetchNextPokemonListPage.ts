@@ -5,7 +5,7 @@ import {
     getPokemonListIsLoading, getPokemonListLimit,
 } from "pages/PokemonPage/model/selectors/pokemonList";
 import {pokemonSliceActions} from "pages/PokemonPage/model/slice/pokemonSlice";
-import {ThunkConfig} from "providers/StoreProvider";
+import {ThunkConfig} from "app/providers/StoreProvider";
 import {fetchPokemonListData} from "pages/PokemonPage/model/services/fetchPokemonListData/fetchPokemonListData";
 
 export const fetchNextPokemonListPage = createAsyncThunk<

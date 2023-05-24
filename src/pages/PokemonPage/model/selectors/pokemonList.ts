@@ -1,4 +1,4 @@
-import {StateSchema} from "providers/StoreProvider";
+import {StateSchema} from "app/providers/StoreProvider";
 
 
 export const getPokemonListData = (state: StateSchema) => state.pokemonList?.data;

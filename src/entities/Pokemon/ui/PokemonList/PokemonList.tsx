@@ -1,15 +1,10 @@
-import React, {memo, useCallback} from 'react';
+import React, {memo} from 'react';
 import {AppLink} from "shared/ui/AppLink/AppLink";
 import {RoutePath} from "shared/config/routeConfig/routeConfig";
 import cls from './PokemonList.module.scss';
 import {classNames} from 'shared/lib/classNames/classNames';
 import {Avatar} from "shared/ui/Avatar/Avatar";
 import {AvatarPokemon} from "shared/const /pokemon";
-import {Page} from "widgets/Page/Page";
-import {
-    fetchNextPokemonListPage
-} from "pages/PokemonPage/model/services/fetchNextPokemonListPage/fetchNextPokemonListPage";
-import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 
 
 const PokemonList = memo((props:any) => {

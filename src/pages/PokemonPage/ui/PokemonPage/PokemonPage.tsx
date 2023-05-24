@@ -29,18 +29,21 @@ const PokemonPage = () => {
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextPokemonListPage());
     }, [dispatch]);
+
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <Page
-                onScrollEnd={onLoadNextPart}
-                className={classNames(cls.PokemonList, {}, [])}
-            >
+
                 <div className={classNames(cls.PokemonPage, {}, [])}>
-                    <PokemonFilters/>
-                    <div>Pokemon List</div>
-                    <PokemonList data={data}/>
+                    {/*<PokemonFilters/>*/}
+                    <div>Pokemon List - {data?.length}</div>
+                    <Page
+                        onScrollEnd={onLoadNextPart}
+                        className={classNames(cls.PokemonList, {}, [])}
+                    >
+                    <PokemonList data={data} isLoading={isLoading} error={error}/>
+                    </Page>
                 </div>
-            </Page>
+
         </DynamicModuleLoader>
     );
 };

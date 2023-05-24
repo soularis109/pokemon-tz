@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppRouter } from 'providers/router';
+import { AppRouter } from 'app/providers/router';
 
 function App() {
 

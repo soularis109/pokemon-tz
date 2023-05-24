@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import {ThunkConfig} from "providers/StoreProvider";
+import {ThunkConfig} from "app/providers/StoreProvider";
 import {PokemonPage, PokemonList} from "pages/PokemonPage/model/types/pokemonPage";
 import {getPokemonListLimit, getPokemonListOffset} from "pages/PokemonPage/model/selectors/pokemonList";
 import {addQueryParams} from "shared/lib/url/addQueryParams/addQueryParams";
