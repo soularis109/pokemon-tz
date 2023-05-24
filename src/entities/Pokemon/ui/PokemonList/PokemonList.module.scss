@@ -1,0 +1,15 @@
+.PokemonList {
+    height: 250px;
+}
+.item__block {
+    display: flex;
+}
+.item__name {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+.list {
+    margin-top: 30px;
+}

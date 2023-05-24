@@ -3,6 +3,7 @@ import {$api} from 'shared/api/api';
 import {CombinedState, Reducer} from 'redux';
 import {StateSchema, ThunkExtraArg} from './StateSchema';
 import {createReducerManager} from './reducerManager';
+import {scrollPositionReducer} from "features/ScrollPosition";
 
 export function createReduxStore(
     initialState?: StateSchema,
@@ -10,6 +11,7 @@ export function createReduxStore(
 ) {
     const rootReducers: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
+        scrollPosition:scrollPositionReducer
     };
 
     const reducerManager = createReducerManager(rootReducers);

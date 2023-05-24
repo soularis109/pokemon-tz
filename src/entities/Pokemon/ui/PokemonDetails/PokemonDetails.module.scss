@@ -1,0 +1,15 @@
+.PokemonDetails {
+   display: flex;
+}
+.PokemonDetailsMoves {
+   border: 1px solid black;
+   height: 350px;
+   overflow-y: scroll;
+}
+.name {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+}
+
+

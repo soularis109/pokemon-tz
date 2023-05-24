@@ -1,5 +1,3 @@
-export interface PokemonList {
-    name:string
-    url:string
-
+export enum PokemonSortField {
+    TITLE = 'title',
 }

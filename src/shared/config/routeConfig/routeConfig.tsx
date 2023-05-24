@@ -1,23 +1,30 @@
 import { MainPage } from 'pages/MainPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
 import {RouteProps} from "react-router-dom";
+import PokemonDetails from "entities/Pokemon/ui/PokemonDetails/PokemonDetails";
 
 export enum AppRoutes {
-    MAIN = 'main',
+    POKEMON = 'pokemon',
+    POKEMON_DETAILS = 'pokemon_details',
     // last
     NOT_FOUND = 'not_found',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
-    [AppRoutes.MAIN]: '/',
+    [AppRoutes.POKEMON]: '/',
+    [AppRoutes.POKEMON_DETAILS]: '/pokemon/',
     // последний
     [AppRoutes.NOT_FOUND]: '*',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
-    [AppRoutes.MAIN]: {
-        path: RoutePath.main,
+    [AppRoutes.POKEMON]: {
+        path: RoutePath.pokemon,
         element: <MainPage />,
+    },
+    [AppRoutes.POKEMON_DETAILS]: {
+        path: `${RoutePath.pokemon_details}:id`,
+        element: <PokemonDetails />,
     },
 
     // last

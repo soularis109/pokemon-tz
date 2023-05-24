@@ -1,10 +1,14 @@
 import {AnyAction, EnhancedStore, Reducer, ReducersMapObject,} from '@reduxjs/toolkit';
 import {CombinedState} from 'redux';
 import {AxiosInstance} from 'axios';
-import {PokemonListSchema} from "entities/Pokemon/model/types/pokemonListSchema";
+import {PokemonListSchema} from "pages/PokemonPage/model/types/pokemonListSchema";
+import {pokemonDetailsSchema} from "entities/Pokemon/model/types/pokemonDetailsSchema";
+import {ScrollPositionSchema} from "features/ScrollPosition";
 
 export interface StateSchema {
+    scrollPosition:ScrollPositionSchema
     pokemonList?: PokemonListSchema;
+    pokemonDetails?: pokemonDetailsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

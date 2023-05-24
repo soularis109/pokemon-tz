@@ -1,19 +1,20 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import {createAsyncThunk} from '@reduxjs/toolkit';
 import {ThunkConfig} from "providers/StoreProvider";
-import {PokemonList} from "entities/Pokemon";
+import {PokemonDetails} from "pages/PokemonPage/model/types/pokemonPage";
 
 
-export const fetchPokemonListData = createAsyncThunk<
-    PokemonList[],
+
+export const fetchPokemonById = createAsyncThunk<
+    PokemonDetails,
     string,
     ThunkConfig<string>
     >(
-        'fetchPokemonListData',
-        async (_, thunkApi) => {
+        'fetchPokemonById',
+        async (pokemonName, thunkApi) => {
             const { extra, rejectWithValue } = thunkApi;
 
             try {
-                const response = await extra.api.get<PokemonList[]>(`/`);
+                const response = await extra.api.get<PokemonDetails>(`/v2/pokemon/${pokemonName}`);
 
                 if (!response.data) {
                     throw new Error();

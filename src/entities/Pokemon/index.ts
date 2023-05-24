@@ -1,6 +1,3 @@
 
-export {
-    PokemonList
-} from './model/types/pokemon';
 
-
+export {fetchPokemonListData} from 'pages/PokemonPage/model/services/fetchPokemonListData/fetchPokemonListData'

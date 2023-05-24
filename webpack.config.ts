@@ -14,7 +14,7 @@ export default (env: BuildEnv) => {
 
     const mode = env.mode || 'development';
     const PORT = env.port || 3000;
-    const apiUrl = env.apiUrl || 'https://pokeapi.co/api/v2/pokemon/';
+    const apiUrl = env.apiUrl || 'https://pokeapi.co/api';
 
     const isDev = mode === 'development';
 
